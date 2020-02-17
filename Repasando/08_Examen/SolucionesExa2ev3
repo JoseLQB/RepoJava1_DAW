@@ -1,0 +1,134 @@
+1)
+Porque el método Collections, que ordena la lista, debe estar fuera y dentro del print poner la lista:
+
+Collections.sort(lista);
+System.out.println(lista);
+
+----------------------------------------------------------
+
+2)
+System.in es un objeto de tipo inputStream. System en una clase e in un atributo publico de clase
+	al igual que out o err.
+
+En la documentación de java, buscando la clase System.
+
+Sí, del tipo inputStream.
+
+----------------------------------------------------------
+
+3)
+String i = sc.nextLine();
+
+----------------------------------------------------------
+
+4)
+Habría que hacer un for para sacar todos los datos:
+
+for(String nume : lista){
+			System.out.println(".............." + nume + "............");
+		}
+
+----------------------------------------------------------
+
+5)
+***
+public class Cinco {
+	public static void main(String[] args) {
+		String st = "luisc,carlosm,barreda,bocanegra";
+
+		List<String> lista1 = new ArrayList<String>();
+		String[]parts = st.split(",");
+		for(String c : parts){
+			lista1.add(c);
+		}
+		for(String unSt : lista1){
+
+			System.out.println(".............." + unSt + "............");
+		}
+	}
+} 
+***
+
+----------------------------------------------------------
+
+6)
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+public class Seis {
+	public static void main(String[] args) {
+		List<String> lista = Arrays.asList("zoraida","concejero","cristianb","martinl","puiu");
+		List<String> lista1 = Arrays.asList("luisc","carlosm","barreda","bocanegra");
+ // Crea una tercera lista para que contenga elementos de las estructuras lista y lista1 .
+ // Los elementos se intercalan comenzando por lista1, ver abajo las salida a obtener.
+ // El último elemento de la lista "lista" quedará fuera, no se almacena en la tercer lista.
+ 		List<String> lista3 = new ArrayList<String>(); // desde aquí sigues tú.
+
+ 		int cont = 0;
+ 		while(lista1.size() > cont){
+
+ 			lista3.add(lista1.get(cont));
+ 			lista3.add(lista.get(cont));
+
+ 			cont++;
+
+ 		}
+ 		for(String sg : lista3){
+
+ 			System.out.println(sg);
+ 		}
+
+	}
+}
+
+-----------------------------------------------------------
+
+7)
+public static
+
+return Integer.parseInt(st);
+
+-----------------------------------------------------------
+
+8)
+a) proccess_line_to_line();
+
+b) No se puede, ya que es private static y debería ser public static.
+
+-----------------------------------------------------------
+
+9)
+openStream();
+reader.lines();
+forEach();
+
+-----------------------------------------------------------
+
+10)
+if((n%2==0)&&(args[n].equals(st))){
+
+		System.out.println(n + " ---- " + st);
+		n++;
+	}
+
+11)
+
+String parts[] = line.split(":");
+alumnos.put(parts[0], parts[1]);
+
+-----------------------------------------------------------
+
+12)
+
+En que se puede hacer lo mismo con menos líneas de código. 
+
+-----------------------------------------------------------
+
+13)
+
+Data Acces Object. Sirve para implementar una interface de acceso a datos.
+
+-----------------------------------------------------------
+
+14)
+

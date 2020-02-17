@@ -1,0 +1,16 @@
+Sevilla:28:febrero
+Cordoba:31:febrero
+Cordoba:35:enero
+Badajoz:32:enero
+Cuenca:30:enero
+Sevilla:26:abril
+Cuenca:26:febrero
+Sevilla:34:enero
+Badajoz:24:febrero
+Badajoz:25:marzo
+Sevilla:22:marzo
+Cuenca:20:marzo
+Cordoba:21:abril
+Cordoba:18:marzo
+Cuenca:15:abril
+Badajoz:25:abril

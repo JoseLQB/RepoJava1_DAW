@@ -1,0 +1,189 @@
+15/06/2019
+
+Estos son varios enunciados que puedes tomarlos como **indicadores de
+cómo estás preparado/a**, para el examen de Junio.
+
+Sin duda, en el período de recuperación que está casi acabado, hemos
+desarrollado tareas que nos han servido para que el resultado es el
+que hoy es.
+
+--> en principio no están pensado estos enunciados para que te pongas
+    a resolverlo, aún así eres libre de hacerlo, el objetivo es guiar
+    una vez más tu esfuerzo y tiempo para cumplir con los objetivos
+    y aprobar. <---- 
+
+
+1. Usaste un objeto StringBuilder, y pudiste mostrar en salida estándar
+   todas las líneas contenidas en un fichero.
+   Por ejemplo en tal fichero hay nueve líneas, y tú escribes a la salida
+   un sólo String que contiene las nueve líneas.
+
+2. Intercalaste en un objeto ArrayList, líneas de file1 y file2.
+   Ejemplo:
+    file1 contiene 
+       Pepito
+       Pepita y Pepito
+       Juan el grande
+    
+    file2 contiene
+       1 1 1
+       2 2 2
+       3 3 3
+       4 4 4
+
+    La lista en memoria tiene 7 elementos
+      Pepito 
+       1 1 1
+        Pepita y Pepito
+         2 2 2
+          Juan el grande
+           3 3 3
+            4 4 4
+
+3. Has leído sólo la "primera línea" de cada uno de los ficheros puestos en
+   la línea de comando.
+   Por ejemplo,
+   $ java Pincipal file5 file6 fileTemp1 fileTemp2 fileTemp3
+   Muestra en salida estándar, 5 líneas (la primera de cada fichero).
+
+4. En el anterior, sabes agregar, lo necesario para obtener la siguiente salida,
+   $ java Pincipal file5 file6 fileTemp1 fileTemp2 fileTemp3
+   hola, soy la primera de file5
+   hola, soy la primera de file6
+   ***fileTemp1 existe pero está vacío***
+   hola, soy la primera de fileTemp2
+   hola, soy la primera de fileTemp3
+   
+   Como ves, detectas y realiza acción específica si el fichero contiene 0 bytes.
+
+5. Sabes mostrar una línea de un fichero en la salida estandar e inmediatamente
+   aceptar por teclado "s" para si o "n" para no, tratándose que lo que se pregunta
+   es eliminar del fichero dicha línea.
+   Por ejemplo file9 contiene
+        Hola que tal?
+        doce son los apósteles.
+        ¿Quién fue Judas?
+        El 21 hay un examen
+
+    En salida estandar se observará con la ejecución:
+        Hola que tal?
+         Borramos? [s/n][default [n]]: s
+        doce son los apósteles.
+         Borramos? [s/n][default [n]]: 
+        ¿Quién fue Judas?
+         Borramos? [s/n][default [n]]: s
+        El 21 hay un examen
+         Borramos? [s/n][default [n]]: n
+
+     El programa no modifica file9 crea un file_temporal con el siguiente contenido:
+        doce son los apósteles.
+        El 21 hay un examen
+
+     Luego podremos renombrar a file_temporal como file9 y hemos conseguido eliminar
+     líneas interactivamente.
+
+6. Sencillos o muy sencillos  <------------
+
+   a. leer de teclado enteros y mostrar al final (se termina con EOF) el valor
+      máximo entre todos los introducidos.
+
+   b. Desde teclado introducir líneas y las agregas en una lista (tipo List de java).
+      Cuando EOF, muestras las líneas introducidas en orden inverso.
+
+   c. Dimensionamos un array según argumento pasado al ejecutar el programa.
+      Leemos líneas desde teclado y la almacenamos en el array.
+      Con EOF o "si execede la dimensión del array". Mostramos las entradas
+      indicando su orden de secuencia:
+      
+      Ejemplo 1:
+      $ java Principal 30
+      la llalla
+      kakkakak
+      oololo
+      marca de EOF
+
+      1. la llalla
+      2. kakkakak
+      3. oololo
+
+      Ejemplo 2:
+      $ java Principal 4
+      rrrrr
+      sss
+      mmmmm
+      kkkk
+      
+      1. rrrrr
+      2. sss
+      3. mmmmm
+      4. kkkk
+
+      No ha debido generar EOF, el algoritmo controla que no puede admitir más entradas
+
+   d. Creas un hash con las entradas de un fichero, las cuales se estructuran como sigue
+      una línea <--- un registro
+      ':' <--- separador de campo
+      Cada registro asocia código postal y localidad
+      Ejemplo
+      41200:Alcalá del Río
+      41111:Almensilla
+      18170:Alfacar
+      29750:Algarrobo
+      29370:Benaoján
+      14940:Cabra
+      
+      El hash te servirá para validar código postales en un siguiente paso, el cual no
+      nos interesa ahora
+   
+   e. Permites introducir nombres de personas, desde el teclada, cada vez que se introduce
+      un repetido debe mostrarse "no aceptado, está repetido".
+      Cada nombre aceptado, es grabado en un fichero.
+
+   f. Aceptamos desde teclado líneas conteniendo una o varias palabras.
+      Mostramos la cantidad de palabras, de cada una.
+   
+      $ java Principal
+      hola como vamos
+       -3-
+      Estamos muy bien preparados
+       -4-
+      Es tarde
+       -2-
+      [introduce sólo return]
+       -0-
+      llllll
+       -1-
+      [marca EOF]
+      Adios esto fue todo
+
+   g. Contamos los caracteres de los parámetros de la línea de comando.
+      $ java Principal hola buenísimo "super way del paraguay" ya
+      4
+      9
+      22
+      2
+
+   h. Sea un fichero con el contenido siguiente
+      zoraida
+      9.25
+
+      concejro
+      9.85
+
+      bocanegra
+      10
+
+      andresd
+      7.90
+
+      La salida de tu programa que procesa dicha información, es:
+
+      *Notas obtenidas por parte de los alumnos de 1DAW*
+
+      zoraida: 9.25
+      concejero: 9.85
+      bocanegra: 10
+      andresd: 7.90
+
+--
+FIN

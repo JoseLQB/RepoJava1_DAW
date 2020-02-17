@@ -1,0 +1,14 @@
+Uso de person y scanner de formas similares partiendo de lo visto en clase.
+En ambos casos se leen en un fichero los datos de una persona y se muestran por pantalla.
+
+En UsoPersonClase.java utilizo una arraylist porque fue como de primeras lo vi más fácil. Funciona correctamente.
+
+En UsoPersonClase2.java lo hago sin usar ArrayList pero no consigo hacerlo bien.
+
+Actu : Consigo que funcione sin usar arraylist pero no exactamente como quería. Entre otras cosa, he tenido que 
+cambiar el formato del documento de texto. 
+
+Ejecutar:
+
+java UsoPersonClase Person.txt
+java UsoPersonClase2 

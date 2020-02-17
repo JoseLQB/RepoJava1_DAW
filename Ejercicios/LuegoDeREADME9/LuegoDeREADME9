@@ -1,0 +1,356 @@
+15 de junio 2019
+
+
+Luego de README, nos toca...
+   Más trabajo, a pocos días del examen de Programación
+
+-1-
+
+BufferedReader no tiene método 'hasNext' como ocurre con alguna otra clase
+que has usado para leer datos de entrada.
+
+V - F
+
+
+Si respondes V escribe una instrucción usándolo, explicando mediante comentario.
+Si respondes F escribe y usa un método mediante el cual consigues la misma funcionalidad
+
+
+No tiene método hasNext pero se puede usar el método readLine() que es lo
+que se usa para leer linea a linea. Para ello, dentro del while decimos que mientras
+sea distinto de null, habíendo declarado ante el string linea, nos devuelva linea,
+que será la linea del fichero
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Re9_1 {
+  
+  public static void main(String [] args) throws IOException {
+    
+    FileReader fr = new FileReader ("entradas.txt");
+    BufferedReader br = new BufferedReader(fr);
+    String linea;
+
+    while((linea = br.readLine()) !=null) { 
+    
+      
+      System.out.println(linea);  
+    } 
+  }
+  
+}
+--
+-2-
+
+Siendo 'lista' un objeto, centrémosnos en los 'tipo de datos', sabiendo que se ha usado así:
+!lista.contains(part[2])  // siendo part un array de string
+
+a. Explica (no escribas en java) el tipo de datos de lista y de part[2]
+
+Lista es una arraylist y part es de tipo string
+
+b. Define en java 'lista' y 'part'
+
+List <String> lista = new ArrayList<String>();
+String part [] = new String [4]; //pongo 4 por poner un ejemplo, 
+se puede dar también el siguiente caso:
+String part [] = linea.split(":"); //siendo línea una variable declarada previamente que 
+va conteniendo las lineas de un fichero donde los campos vienen separados por dos puntos
+
+
+--
+-3-
+
+¿Es posible?
+
+import java.util.Scanner;
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+Scanner sc = new Scanner(new FileReader("/home/pepe/taller/categoria"));
+BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+
+Justifica.
+
+Sí, es posible. Ya que, en este caso, utilizamos Scanner para leer datos de un fichero y BufferedReader
+para leer desde teclado. 
+
+--
+-4-
+
+// Esta codificación responde al apartado 3b de README9, algo falla. Corrige
+
+import java.util.Scanner;
+import java.io.FileReader;
+import java.util.ArrayList;
+
+public class Validacion_3b{
+        public static void main(String[] args) throws Exception{
+                String line = null;
+                Scanner sb = new Scanner(new FileReader("javaEj/entradas"));
+                ArrayList<String> lista = new ArrayList <String>();
+                for (String a : args){
+                        lista.add(a);
+                }
+                while(sb.hasNext()){
+                        line = sb.nextLine();
+                        String[] partes = line.split(":");
+                        if (lista.contains(partes[2])){
+                                System.out.println(line);
+                        }
+                }
+        }
+}
+
+Va mal porque había que coger la parte 2 en vez de la 0, que es la que correspondía al código.
+
+if (lista.contains(partes[2])) cambiar por if (lista.contains(partes[0]))
+
+
+
+--
+-5-
+
+Se pide completes con los imports adecuados, prepares el fichero datos.
+Pruebes y finalmente contestes ¿Para qué sirve esté código en el método
+main de la clase.
+
+  long unicos = 0;
+  try(Stream<String> lineas = Files.lines(Paths.get("datos"))) {
+     unicos = lineas.flatMap(l -> Arrays.stream(l.split(" ")))
+                    .distinct()
+                    .count();
+  }
+  catch(IOException e) {
+  }
+  System.out.println(unicos);
+
+Imports necesarios:
+
+import java.util.stream.Stream;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+Este código sirve para leer un fichero, eliminar los repetidos y contar cuantos
+elementos únicos hay.
+
+Fichero de datos:
+
+Pedro 32
+Pedro 55
+Juan 23
+Maria 54
+Jose 12
+Rosa 21
+Jose 10
+
+--
+Una vez resuelto ejercicio anterior, se pide realizes lo mismo,
+utilizando un algoritmo tradicional, en el que usarás para la
+resolución un objeto Hashtable.
+
+Hecho, Re9_5.java
+
+--
+-6-
+
+Código java en
+   Programacion/CodigoDeClase/java/marzo25/javaFX
+   y en línea 27 se tiene:
+
+        newBtn.setOnAction(new EventHandler<ActionEvent>()
+        {
+            @Override public void handle(ActionEvent e)
+            {
+                printMessage("You have pressed the new Button");
+            }
+        });
+
+Acorta, allí donde puedas, usando una expresión lambda.
+
+///
+btn2.setOnAction(event -> {
+    printMessage("valor: " + choice.getValue().getValue());
+--
+-7-
+
+java 8, introdujo algo para representar una instancia de una interfaz funcional.
+
+a. ¿Qué?
+
+El uso de streams y expresiones lambda 
+
+b. ¿Esto tiene una relación, con el ejercicio anterior?
+
+///
+
+--
+-8-
+
+Sea el fichero llamado "ciudadesTemp", el cual almacena registros de temperaturas,
+ciiudades y mes. Las ciudades son 4 y los meses con registros también son 4.
+
+Sevilla:28:febrero
+Cordoba:31:febrero
+Cordoba:35:enero
+Badajoz:32:enero
+Cuenca:30:enero
+Sevilla:26:abril
+Cuenca:26:febrero
+Sevilla:34:enero
+Badajoz:24:febrero
+Badajoz:25:marzo
+Sevilla:22:marzo
+Cuenca:20:marzo
+Cordoba:21:abril
+Cordoba:18:marzo
+Cuenca:15:abril
+Badajoz:25:abril
+
+Se pide escribas un programa que usando stream (es una práctica de stream), obtenga
+
+28
+31
+35
+32
+30
+26
+26
+34
+24
+25
+22
+20
+21
+18
+15
+25
+
+
+Cordoba
+Cuenca
+Sevilla
+
+
+**  Badajoz Cordoba Cuenca Sevilla **
+
+
+Explicación de la salida que presenta la ejecución:
+
+  - la primera parte es
+      sólo las temperaturas 
+  - la segunda parte es
+      las ciudades que tienen registros, ordenadas alfabéticamente, no teniendo en 
+      cuenta a la primera (skip la primera).
+  - la tercera parte es
+      igual que en segunda parte, tiene en cuenta todas las ciudades, ordena
+      alfabéticamente, resuelve con "map reduce".
+
+Requerimiento del enunicado
+
+  Tu resolución debe ser teniendo en cuenta la siguiente codificación incompleta:
+
+  public class CiudadesTemp {
+    private String ciudad;
+    private String mes;
+    private int temperatura;
+    public CiudadesTemp() {}
+    public CiudadesTemp(String s, int i, String m) {
+         this.ciudad =  s;
+         this.temperatura = i;
+         this.mes = m;
+    }
+    public int getTemperatura() {
+      return temperatura;
+    }
+    public String getMes() {
+      return mes;
+    }
+    public String getCiudad() {
+      return ciudad;
+    }
+    public static void main (String[] args) {
+      // esto te corresponde
+      //Hecho
+    }
+  }
+
+--
+-9-
+
+Poniendo los imports correspondiente, comprueba que sirve como solución
+del apartado 3B de README9.
+
+import java.util.stream.Stream;
+import java.util.stream.Collectors;
+import java.util.Lista;
+import java.nio.file.Files;
+import java.nio.file.Paths; 
+import java.io.IOException;
+
+
+
+public class Readme9_3b {
+  public static void main (String[] args) throws Exception {
+    Stream<String> stream=Files.lines(Paths.get("/home/smct/javaEj/entradas"));
+    List<String> lista = stream.filter(p -> p.split(":")[2].equals(args[0]))
+                               .collect(Collectors.toList());
+    if(lista.size()==0) {
+       System.out.println("NO Existente dicho código");
+    }
+    else {
+       lista.forEach(System.out::println);
+    }
+  }
+}
+
+a. ¿Donde se usan métodos/clases de java 8?
+
+  Files.lines(), stream.filter(), .collect()
+
+b. Mediante una solución en la que no uses ninguna caractéristica de java 8,
+   debes obtener, lo mismo, más "el porcentaje de registros seleccionados
+   respecto del total de registros".
+
+   Ejercicio9/Re9_9.java
+   Ejercicio9/R9_9_3B.java
+
+--
+-10-
+
+La próxima es una tarea, sobre la que podemos repasar semana próxima:
+
+  - Si file "entradas" tuviera format JSON
+  - Si la información de "entradas" y "categorias", ambos ficheros usados en
+    README9, son dos tablas en una BD MySQL
+
+deberías ponerte a punto, en procesar la información proveniente de estas
+fuentes.
+
+  Atención API JSON usada durante el curso.
+  Atención conector JDBC y API java usado durante el curso.
+
+--
+
+FIN
+
+
+Las interfaces no son instanciables, no se crea objeto, hay que producir una implementacion
+Una inteface funcional tiene solo un metodo
+
+Pregunta13 pdf
+
+Person p = new Person();
+xEj DAOPerson dp = new ImpleJson();            //igual que con las List y las ArrayList
+                                               //En una implementacion se implementa TODO
+dao.grabar(p);
+//En dao person estará el método grabar.
+
+
+
+Con java8 hay métodos por defecto para esto,

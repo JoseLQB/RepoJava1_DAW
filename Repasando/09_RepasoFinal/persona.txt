@@ -1,0 +1,9 @@
+juan:23
+pepe:24
+pepe:25
+maria:64
+juana:33
+jose:21
+marta:111
+isabel:22
+rosa:99

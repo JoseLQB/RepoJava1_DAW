@@ -1,0 +1,5 @@
+01:lácteos
+03:ferretería
+04:textil
+05:bricolage
+08:menage

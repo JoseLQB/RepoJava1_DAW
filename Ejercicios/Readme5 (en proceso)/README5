@@ -1,0 +1,120 @@
+7 de junio
+
+Se ha visto en clase 
+
+  - Uso del constructor de la clase Scanner(String st).
+
+  - Junio6.java que se había pedido en README4, uso de HashTable,
+
+     Obtener totales de líneas iguales existentes en un fichero.
+
+--Hecho en la carpeta Readme4 
+
+Podemos realizar sin problemas los apartados 5 y 6 de exa2Ev3
+
+Cinco.java
+Seis.java
+
+  - esto ha sido comentado en clase.
+
+  - se hace incapié de saber leer y buscar en la documentación java, métodos
+
+     y constructores, según clase usada en código que te puedan poner a entender
+
+     o leer.
+
+  - se deja como ejercicio, generalizar este mecanismo de intercalar o fusionar,
+
+     pidiendo que trabajes sobre dos ficheros, creando un tercero como la fusión de
+
+     ambos ficheros de entrada. Tendrás que escribir (primera vez en esta recuperación)
+
+     datos en un fichero.
+
+-Seis_Ficheros/Ficheros6.java
+ 
+
+Ejercicio para el fin de semana
+
+-------------------------------
+
+ 
+Sea un fichero con contenido de una agenda tal como se describe a continuación:
+
+Olga Zubiría González
+Av de los Corrales 28, 3D
+954236212
+636221288
+
+Juan Sebastian Parodi Sánchez
+C/Escultor Federico Ortiz Sajón 1, Bdcha
+954632331
+
+Mario Balbuena Pérez
+C/Diamante 12, 4A
+954638871
+651238142
+
+Silvia Rodríguez Ventura
+C/Fray Pedro Soles, 16
+954661287
+635962209
+
+
+Trata cada registro, obteniendo una salida (sobre salida estándar) tal como sigue:
+
+Nombre y Apellido                                 Teléfono
+-----------------                                 ----------
+
+Olga Zubiría González                               954236212  -  636221288
+
+Juan Sebastian Parodi Sánchez                       954632331
+
+Mario Balbuena Pérez                                954638871  -  651238142
+
+Silvia Rodríguez Ventura                            954661287  -  635962209
+
+ 
+
+Notar que podrías tener un definido un método invocado desde el método main:
+
+private static String getRegistro(Scanner sc) {
+
+    String registro;
+
+     . . .
+
+     . . .
+
+     return registro;
+
+}
+
+
+y se dedica a avanzar un registro desde el fichero; obtiene el registro y lo devuelve.
+No es obligatorio, pero al menos en una segunda versión podrías tener en cuenta un
+método cómo este, en tu solución.
+
+El programa se ejecutaría:
+
+$ java ReadingAgenda agenda.txt
+
+El fichero con el contenido de la agenda se pasa como argumento en la línea de comando.
+
+ 
+--
+Ver, estudiando: https://www.journaldev.com/709/java-read-file-line-by-line 
+--
+
+
+  Problemas, dudas ?? Para clase / chat /
+
+
+Lunes 10/06/2019, varios programas cortos ha realizar en clase.
+
+___Tarea___ también para el find de semana: vamos viendo lo que se dio sobre stream (java8).
+            tenemos que pasar algunas selecciones de registros hechas en estas prácticas
+            mediante método tradicional, a soluciones usando 'stream'. 
+            Ejemplo:  Ignoramos registros personas con nombre de persona menor de 4 caracteres.
+                      O selecciones mediante criterios similares, por ejemplo usando método de
+                      String 'matches'

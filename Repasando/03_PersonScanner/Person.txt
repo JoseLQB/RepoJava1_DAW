@@ -1,0 +1,5 @@
+Nombre: Jose
+Genero: hombre
+Edad: 31
+Peso: 84
+Color de ojos: verdes

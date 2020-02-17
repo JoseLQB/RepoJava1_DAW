@@ -1,0 +1,39 @@
+6 de junio
+
+Usando un hash para contar ocurrencias
+--------------------------------------
+
+Codificamos clase Junio6 que ejecuta de la siguiente manera:
+
+$ java Junio6 hol tela cielo hol cielo rosa vez cielo
+hol: 2
+tela: 1
+cielo: 3
+rosa: 1
+vez: 1
+
+Notar que de esta forma, estaría contenido el requerimiento de Junio5.
+Las keys del hash, se corresponden con los argumentos de la línea de
+comando tomando sólo una ocurrencia de ellos.
+
+Se trabaja en clase.
+Tenemos un único import java.util.HashTable
+
+
+Se deja para realizar, exáctamente lo mismo pero tratando un fichero.
+Por primera vez se indica en clase de recuperación que el fichero podemos
+tratarlo directamente, ya que hasta ahora usábamos "redirección" de la entrada
+estándar, tiene esto un fin didáctico. Veníamos preparando nuestros programas
+para trabajar con datos suministrados desde entrada estandar (System.in) ¿OK?
+
+Debemos conseguir una salida que sea similar a lo mostrado cuando ejecutamos
+versión 'únicas ocurrencias de los argumentos líneas de comando', nuestro uso
+de hash en clase.
+En este caso contamos las ocurrencias de líneas, cada línea puede contener más
+de una palabra. Las keys del hash serán las líneas del fichero y cada valor
+el contador de ocurrencias de esa key (de esa línea).
+
+--
+
+
+

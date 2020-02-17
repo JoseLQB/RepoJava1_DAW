@@ -1,0 +1,39 @@
+18/06/2019
+
+Estudia sobre todo el material.
+
+En la BD MySQL tenemos:
+
+MariaDB [news]> select * from articulo;
++--------+-------------------+--------+
+| codigo | nombre            | codcat |
++--------+-------------------+--------+
+| Ai2b3  | olla plana        | 07     |
+| Az4b5  | sartén con mango  | 07     |
+| Ft1j6  | zócalo mármol     | 11     |
++--------+-------------------+--------+
+3 rows in set (0.00 sec)
+
+Mientras que el contenido del fichero 'entradas' y entradas.json
+puedes verlo tú ya que dispones de los mismos en esta carpeta.
+
+La salida de la ejecución de la clase Principal1 es la siguiente:
+
+$ java -cp ~/misjars/*:. Principal1
+olla plana
+sartén con mango
+zócalo mármol
+{11=1, 01=6, 03=4, 05=3, 06=3, 07=2}
+01
+yogur marca JJ
+queso gallego HH
+yogur marca JJ
+mantel tipo cc
+destornillador estrella mediano
+destornillador de pala mediano
+
+Céntrate en 'explicarte' como trabaja cada uno de los componentes o
+clases, y no estés tranquilo/a si algo de la salida no te lo explicas.
+
+Principalmente, pon tu atención en el código de las implementaciones que
+se usa desde Principal1.java.

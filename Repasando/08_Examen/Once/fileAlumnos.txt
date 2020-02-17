@@ -1,0 +1,7 @@
+concejero:David Concejero:segunda fila ventana
+wyns:María Félix Wyns:segunda fila ventana
+quintanilla:José Luis Quintanilla:tercera fila ventana
+gonzalezl:Luis Gonzalez:cuarta fila izquierda
+puiu:Robert Mario Puiu:primera fila ventana
+cristianb:Cristian Baños:tercera fila izquierda
+zoraida:Zoraida Ríos:primera fila izquierda

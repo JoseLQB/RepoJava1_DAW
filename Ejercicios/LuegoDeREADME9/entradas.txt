@@ -1,0 +1,7 @@
+Pedro 32
+Pedro 55
+Juan 23
+Maria 54
+Jose 12
+Rosa 21
+Jose 10

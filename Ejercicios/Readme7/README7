@@ -1,0 +1,57 @@
+12 junio 2019
+
+
+Desde entrada estandar leer lineas hasta eof, cuando eof
+se muestran las lineas solo una ocurrencia (solo una ocurrencia
+por si hubiera repetidas)
+
+Para pensar: solo considerar las no repetidas.
+
+Ejemplo:
+
+hola
+juan
+cielo
+hola
+pizarra
+cielo
+
+Resultado:
+
+juan pizarra
+
+***En ambos grabamos en ficheros
+
+--RUno.java
+--RUno2.java
+-----------------------------------
+
+Leer de entrada estandar enteros usando para almacenarlos un arrays de 
+30 elementos. Cuando eof se muestran los elementos introducidos por teclado
+y almacenados en el array.
+
+-----------------------------------
+
+Hemos vuelto al programa java que tratábamos objetos persona desde fileperson
+  - nuevo:
+      arrays de personas se inicializan a null con lo cual puedo recorrer el 
+      array interesándome cuando el objeto es distinto de null
+
+      si el array es de enteros la inicialización la hace a 0.
+
+      seleccionamos por método tradicional y "stream" personas que su teléfono
+      contiene 55.
+
+      obtenemos media de edades de todas las personas (método tradicional y streams)
+
+      obtenemos media de edades de todas las personas (método tradicional y streams) 
+      pero de las personas que su teléfono contiene 55.
+
+      al obtener media mediante stream (average) hemos visto clase Optional y OptionalDouble
+
+      hemos visto que la clase Arrays tiene método stream luego hemos podido convertir el
+      arrays de person a stream; en las colecciones stream es un método, no es así en los
+      arrays, luego se ejercitará
+
+      hemos convertido a IntStream al usar mapToInt sobre un stream tipo person
+

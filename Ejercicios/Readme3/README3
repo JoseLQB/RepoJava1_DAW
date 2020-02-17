@@ -1,0 +1,151 @@
+5 de junio
+
+Estamos en capacidad de realiazar, entendiendo perfectamente los siguientes
+apartados del último examen de Programación, ver Enunciados.pdf en
+  TPs/exa2Ev3/Enunciados.pdf
+
+2.
+ a,b,c
+
+ a) System es una clase, in es un atributo de la clase System al igual que name 
+ sería un atributo de la clase person.
+ b) En la documentación de la clase System.
+ c) System in es un objeto de la clase ifstream.
+
+3.
+
+String i = sc.nextLine();
+
+4.
+
+Hecho;
+Cuatro.java
+
+5.
+
+Hecho;
+Cinco.java
+
+10.
+
+Hecho;
+Diez.java
+
+
+
+Agregando ejercicio
+-------------------
+
+Utilizando un objeto Set, vamos a indicar en la salida los argumentos de la
+línea de comando, sólo con una ocurrencia. Ejemplos:
+
+$ java ArgumentosUnicos hol hol hol
+hol
+
+$ java soloUnaOcurrencia vaso cielo vela tela cielo cola vaso cola tema
+java ArgumentosUnicos vaso cielo vela tela cielo cola vaso cola tema
+vaso
+tela
+vela
+tema
+cielo
+cola
+
+$ java ArgumentosUnicos a b c d e f f f 
+a
+b
+c
+d
+e
+f
+
+Hecho;
+EjercicioSet.java
+
+--
+
+Pregunta / ejercicio
+
+¿De cual otra forma podrías haber resuelto?, sin usar un tipo HashSet, que 
+seguramente has empleado en tu resolución. Es decir, ¿Eres capaz de obtener
+una solución sin usar un Set?
+
+//Hecho con una arraylist
+EjercicioNoSet1.java
+
+Programa para hacer, (va marcando el nivel en las clases de recuperación).
+-------------------
+
+Descripción:
+  Trabajamos nuevamente sobre los datos de persona filePerson, podemos
+  poner unos cuantos registros más donde se repita el nombre, por ejemplo 
+  que haya dos 'fernando' tres 'mario', etc.
+  El programa usa un array y los mismos import que en la segunda version
+  descripta en README2.
+
+  Además agregamos lo necesario para que además de dar la información de
+  nombre persona y teléfono, cuando ya existe un nombre, no tiene en cuenta
+  el registro completo y al final indica cuales registros de la entrada de
+  datos no han sido tenidos en cuenta por tener un nombre ya existente, lo
+  que sería un nombre repetido.
+
+Tener en cuenta: 
+   - Vale una dimensión de array de 30 elementos (se asegura que es suficiente). 
+   - Debes usar array uno o más de uno para almacenar en memoria durante el 
+     proceso, luego sólo permitido arrays.
+   - Además podrás usar un Set, si lo ves conveniente.
+   
+--
+Ejemplo
+--
+
+Contenido de filePerson,
+
+$ cat filePerson1
+rosa:av de las camelias s/n:23:6362387
+fernando:ave maría purísima 33:23:6362355
+mario:av de la paz 5 1A:23:6362331
+sara:Corrales 15, 3K:25:6362339
+eva:Plaza 5, 2Izq:29:631220063
+fernando:Avenida Manuel Siurot 4, 3C:28:635876619
+elvira:gavilanes 14 bajo dcha:30:631214110
+mario:León XIII, 5 5D:31:636765948
+silvia:c/Feria 6:23:612136970
+mario:c/ Fuentes 11:25:622791699
+ignacio:avenida cristo de la sed 41, 6C:32:636214199
+
+--
+Nuestra solución es la clase Junio5
+--
+
+$ java Junio5 < filePerson
+
+rosa ----> 6362387
+fernando ----> 6362355
+mario ----> 6362331
+sara ----> 6362339
+eva ----> 631220063
+elvira ----> 631214110
+silvia ----> 612136970
+ignacio ----> 636214199
+  ***Los siguientes registros no han sido procesados.***
+fernando:Avenida Manuel Siurot 4, 3C:28:635876619 
+mario:León XIII, 5 5D:31:636765948
+mario:c/ Fuentes 11:25:622791699
+
+
+Conseguido de dos formas. 
+
+--Junio5.java Hace lo que se pide en el enunciado pero sin usar la clase person
+--Junio5Person.java Funciona usando la clase person, pero no creo una lista de personas
+--Junio5PersonList.java Intento crear una lista de objetos person, pero me da un fallo que 
+no consigo arreglar.
+
+
+--
+Finalmente, no olvides, pelearte un poco con expresiones regulares,
+puedes practicar selecciones curiosas usando el método 'matches' de
+la clase String, ten en cuenta 3.6 y 4 de 
+https://www.vogella.com/tutorials/JavaRegularExpressions/article.html
+--
+

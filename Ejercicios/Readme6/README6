@@ -1,0 +1,90 @@
+10 de junio
+
+Se ha visto en clase 
+
+  - Resoluciones de los apartados 6 (se han comentado más de una solución),
+    7. 
+
+    -- Siete.java
+
+
+    8
+      a.  
+      -- en el main:
+      	process_line_to_line();
+
+
+      b.
+
+      -- no se puede, tendría que ser public static
+    
+
+
+  - Programas para realizar entre 8 y 12 minutos.
+
+    1)  Contar las líneas en blanco introducidas o leídas desde la entrada estándar
+
+       ---R1_ContarBlancos.java
+
+    2)  Mediante un objeto BufferedReader, leer desde teclado líneas de caracteres.
+        Mostrar su longitud.
+        Terminar cuando es introducido la línea con contenido "fin".
+
+       ---R2_ContarConBR.java 
+
+
+    3)  El siguiente es de más tiempo que los anteriores.
+
+        Leer desde la entrada estándar, un nombre (sería una primer línea) e inmediatamente
+        leer una línea siguiente con nombres de aficiones separados por coma, por ejemplo:
+
+        Mario (return 1ra línea)
+        senderismo,natación,cachimba,música,bricolage (return sería la 2da línea)
+
+        agregar a un hash de tipo String para la key y String para el valor, con lo cual
+        Mario sería una nueva clave en dicho hash, con valor
+        "senderismo,natación,cachimba,música,bricolage"
+
+        Continuar obteniendo pares de líneas nombre/aficiones.
+
+        Termina la entrada con EOF.
+
+        Mostrar en salida estándar, una vez ocurra EOF:
+
+        key        Valor
+        ------     ---------
+        Mario      senderismo,natación,cachimba,música,bricolage
+        ....       ....
+        ....       ....
+
+        ---R3_Aficiones.java
+
+Se ha dejado como tarea, conseguir sin ayuda el ejercicio de procesar datos de agenda. Se trata
+de practicar cuando el registro de datos no coincide con una linea de texto en la fuente de datos.
+
+Se insiste que la solución es necesario terminar presentándola con un método invocado desde el 
+método main. Un método con esta firma,
+
+private static String getRegistro(Scanner sc) {
+    //  retorna el siguiente registro de la fuente de entrada o null en caso de EOF
+
+      ... 
+      ... 
+      ...
+}
+
+Vamos a ir poniendo el foco en seleccionar registros o datos usando java 8 stream en lugar de la
+forma tradicional, por ello se deja para pensar alg muy sencillo:
+  Se pide en el ejercicio (3) explicado más arriba,
+  mostrar las claves con sus respectivos valores, cuando las aficiones son al menos 4.
+
+En el ejemplo, Mario se mostraría ya que tiene más de 4 aficiones, pero por ejemplo si en el hash
+tuviéramos la key 'Laura' con valor 'poesía,guitarra,bicicleta' no se muestra por ser el número de
+aficiones menor a 4.
+
+En el programa de proesar los datos de agenda, se podría pedir, mostrar campos de cada registro
+cuyo contenido es sólo caracteres numéricos [0-9].
+
+Lo primero, es no perderse en el planteo de la selección (estructura condicional) usando metodología
+tradicional, procedimental. Luego se trata de reescribir la solución usando streams.
+

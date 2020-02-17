@@ -1,0 +1,100 @@
+31/05/2019
+
+A problemas y estudio directamente:
+
+1. Definir una clase Java que sirva para mostrar en pantalla los argumentos
+   pasados al programa, desde la línea de comandos.
+
+   Obligado cumplimiento para tu código:
+
+    - no debes usar "ningún" objeto o variable de tipo entero, como un
+      contador.
+
+    Si se pide ejecutar tu clase, suponiendo que la llamas Principal
+    con la siguiente línea desde una consola
+
+    $ java Principal esto esta ese eso
+
+    La salida de la ejecución debe ser:
+
+    esto
+    esta
+    ese
+    eso
+
+    Una vez hecho, has sido capaz de usar y recorrer una array creado por
+    el intérprete java.
+
+    -Resuelto en Punto1.java
+
+    Contesta:
+
+    a. de que tipo es el array que has debido recorrer.
+
+    -De tipo String
+
+    b. cómo conoces el número de argumentos situados y leídos en la línea de
+       comando. La cantidad, si son seis, siete, dos.
+       Supone que te piden que no debes mostrar nada, sólo la cantidad de
+       argumentos o parámetros introducidos desde la shell, al ejecutar
+       el programa.
+
+    - Con args.length. Resuelto en Punto1b.java
+
+
+    c. Si te piden mostrar los argumentos de la línea de comando que tienen
+       más de 10 caracteres, los demás no mostrar.
+
+    - Resuelto en Punto1c.java
+
+2. Agrega a tu solución anterior, que además de mostrar en pantalla, almacenas
+   cada uno de los parámetros en un array definido por ti, llámalo nuevo.
+
+
+   a. Luego de mostrar cada uno de los parámetros (solución obtenida en (1)),
+      muestras el contenido (cada elemento) del array "nuevo" (este array es el
+      que te piden en (2)).
+
+    -Puntos 2 y 2a resueltos en Punto2.java
+
+
+3. Genera tú un enunciado de este tema, juega y trabaja solo/a.
+
+--
+Personal que no va agregando, imaginando, usando sentido común, haciendo intervenir
+nuevos elementos, no avanza y va a lo mínimo.
+--
+
+- a. Mostrar los elementos del array en el orden inverso al que han sido introducidos
+
+- Resuelto en Punto3a.java
+
+- b. Que solo se muestren las palabras del array que contengan la letra "e"
+
+- Resuelto en Punto3b.java
+
+- c. Haz un programa que como resultado de todo lo hecho en los puntos anteriores
+
+- Resuelto en Punto3c.java
+
+- d. Itroduce dos números por argumentos y mostar la suma
+
+- Resuelto en Punto3d.java
+
+
+
+
+---- En proceso ------
+
+
+
+
+En punto (2), has debido resolver como "dimensionar" el array. /// --- dudas sobre esto ---
+
+Próximo tema:
+
+  Entender la clase System.
+
+  System "ya la estás usando" para mostrar por pantalla, atención, hay que entender.
+
+

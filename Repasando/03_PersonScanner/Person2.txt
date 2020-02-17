@@ -1,0 +1,4 @@
+Jose:Hombre:30:80:negros
+Marta:Mujer:29:60:verdes
+Andres:Hombre:35:90:marrones
+Juana:Mujer:25:55:azules
